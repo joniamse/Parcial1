@@ -1,0 +1,17 @@
+<%= form_with(model: club_director, local: true) do |form| %>
+  <% if club_director.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(club_director.errors.count, "error") %> prohibited this club_director from being saved:</h2>
+
+      <ul>
+        <% club_director.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
